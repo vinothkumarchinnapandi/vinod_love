@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You ❤️</title>
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?love,romantic') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-top: 20%;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px black;
+        }
+        p {
+            font-size: 1.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>I Love You ❤️</h1>
+    <p id="loveText"></p>
+
+    <script>
+        const lovePhrases = [
+            "I Love You (English)",
+            "Je t’aime (French)",
+            "Te amo (Spanish)",
+            "Ich liebe dich (German)",
+            "Ti amo (Italian)",
+            "愛してる (Japanese)",
+            "사랑해 (Korean)",
+            "Я люблю тебя (Russian)",
+            "Te iubesc (Romanian)",
+            "Aku cinta kamu (Indonesian)",
+            "मैं तुमसे प्यार करता हूँ (Hindi)"
+        ];
+
+        function showLove() {
+            let index = 0;
+            setInterval(() => {
+                document.getElementById("loveText").innerText = lovePhrases[index];
+                index = (index + 1) % lovePhrases.length;
+            }, 2000);
+        }
+
+        showLove();
+    </script>
+</body>
+</html>
